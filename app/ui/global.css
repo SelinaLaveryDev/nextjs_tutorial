@@ -1,3 +1,9 @@
+/*  You can use this global.css file to add CSS rules to all the routes in your application
+ - such as CSS reset rules, site-wide styles for HTML elements like links, and more.
+
+You can import global.css in any component in your application, but it's usually good practice to add it to your top-level component. 
+In Next.js, this is the root layout  */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
