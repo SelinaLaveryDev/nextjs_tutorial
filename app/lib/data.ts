@@ -29,6 +29,7 @@ const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
 export async function fetchRevenue() {
   try {
     // Artificially delay a response for demo purposes.
+    // This is to simulate a slow database query called a "slow data fetch".
     // Don't do this in production :)
 
     console.log('Fetching revenue data...');
