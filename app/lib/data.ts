@@ -40,6 +40,7 @@ export async function fetchRevenue() {
 
     // console.log('Data fetch completed after 3 seconds.');
     console.log('slow data fetch removed');
+    console.log("data>>>>>", data);
 
     return data;
   } catch (error) {
