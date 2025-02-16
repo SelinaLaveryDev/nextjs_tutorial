@@ -1,3 +1,18 @@
+// This file contains functions to fetch data from the database. 
+// The functions use the postgres package to connect to the PostgreSQL database and execute SQL queries.
+// The fetchRevenue function fetches revenue data from the database.
+// The fetchLatestInvoices function fetches the latest invoices from the database.
+// The fetchCardData function fetches data for the cards on the dashboard.
+// The fetchFilteredInvoices function fetches filtered invoices based on a search query.
+// The fetchInvoicesPages function fetches the total number of pages for paginating invoices.
+// The fetchInvoiceById function fetches an invoice by its ID.
+// The fetchCustomers function fetches all customers from the database.
+// The fetchFilteredCustomers function fetches filtered customers based on a search query.
+// The functions return the fetched data or throw an error if the data cannot be fetched.
+// The functions are used in the dashboard page to fetch data and display it on the page.
+// The functions are asynchronous and use the await keyword to wait for the data to be fetched before returning it.
+// The functions are exported so they can be used in other files.
+
 import postgres from 'postgres';
 import {
   CustomerField,
@@ -21,7 +36,7 @@ export async function fetchRevenue() {
 
     const data = await sql<Revenue[]>`SELECT * FROM revenue`;
 
-    // console.log('Data fetch completed after 3 seconds.');
+    console.log('Data fetch completed after 3 seconds.');
 
     return data;
   } catch (error) {
