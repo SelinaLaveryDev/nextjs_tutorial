@@ -5,15 +5,15 @@
 // Can view the page at http://localhost:3000/dashboard
 
 import { Card } from '@/app/ui/dashboard/cards';
-import RevenueChart from '../ui/dashboard/revenue-chart';
-import LatestInvoices from '../ui/dashboard/latest-invoices';
-import { lusitana } from '../ui/fonts';
-import { revenue } from '../lib/placeholder-data';
+import RevenueChart from '../../ui/dashboard/revenue-chart';
+import LatestInvoices from '../../ui/dashboard/latest-invoices';
+import { lusitana } from '../../ui/fonts';
+import { revenue } from '../../lib/placeholder-data';
 import {
    fetchRevenue, 
    fetchLatestInvoices, 
    fetchCardData 
-  } from '../lib/data';
+  } from '../../lib/data';
  
 export default async function Page() {
   const revenue = await fetchRevenue();
